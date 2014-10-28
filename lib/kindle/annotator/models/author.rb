@@ -15,7 +15,17 @@ module Kindle
         end
 
         def id
-          @attributes.fetch('id') { Digest::MD5.hexdigest(self.name) }
+          return @id if @id
+
+          internal_id = @attributes['id']
+
+          @id = if internal_id.nil?
+            Digest::MD5.hexdigest(self.name)
+          else
+            internal_id
+          end
+
+          @id
         end
 
         def name
