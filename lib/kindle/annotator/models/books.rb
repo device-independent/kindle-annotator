@@ -30,7 +30,7 @@ module Kindle
 
         private
         def books_collection
-          @collection.map { |r| Book.new(r) }
+          @collection.map { |record| Book.new(record) }
         end
       end
     end
