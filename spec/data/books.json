@@ -3,12 +3,14 @@
     "id": "B007S33NT2",
     "title": "Amazon Virtual Private Cloud User Guide",
     "author_ids": ["4589"],
+    "annotation_ids": ["3345"],
     "last_annotated_at": "May 31, 2012"
   },
   {
     "id": "B007S33P5O",
     "title": "Amazon Virtual Private Cloud Getting Started Guide",
     "author_ids": ["6789"],
+    "annotation_ids": [],
     "last_annotated_at": "May 31, 2012"
   }
 ]
