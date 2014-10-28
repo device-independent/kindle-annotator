@@ -1,0 +1,16 @@
+[
+  {
+    "id": "vbfgh",
+    "book_id": "accdd",
+    "location": 50,
+    "content": "Here is an annotation.",
+    "note_ids": []
+  },
+  {
+    "id": "lkjhdsfg",
+    "book_id": "accdd",
+    "location": 58,
+    "content": "\"A quoted quote.\"\n",
+    "note_ids": ["poiu"]
+  }
+]
