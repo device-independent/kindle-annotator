@@ -8,6 +8,10 @@ module Kindle
           @attributes = attributes
         end
 
+        def <=>(other)
+          self.book_id <=> other.book_id
+        end
+
         def id
           return @id if @id
 
@@ -44,6 +48,22 @@ module Kindle
 
         def note_ids?
           self.note_ids.any?
+        end
+
+        def notes
+          return @notes if @notes
+
+          associated_notes = []
+
+          if @attributes.has_key?('notes')
+            notes_collection = @attributes['notes']
+            associated_notes = Notes.new(notes_collection)
+          elsif self.note_ids?
+            associated_notes = []
+          end
+
+          @notes = associated_notes
+          @notes
         end
       end
     end
