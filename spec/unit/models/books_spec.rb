@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Kindle::Annotator::Models::Books do
   let(:books_file) do
-    File.read(File.expand_path('../../../../data/books.json', __FILE__))
+    File.read(File.expand_path('../../../data/books.json', __FILE__))
   end
 
   let(:books) do
