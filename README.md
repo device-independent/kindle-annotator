@@ -1,5 +1,7 @@
 # Kindle Annotator
 
+[![Build Status](https://travis-ci.org/nateklaiber/kindle-annotator.png)](https://travis-ci.org/nateklaiber/kindle-annotator)
+
 A utility script that allows you to scrape your Kindle **Highlights**,
 **Notes**, **Books**, and **Authors**.
 
