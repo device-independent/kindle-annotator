@@ -1,0 +1,46 @@
+[
+  {
+    "id": "B007S33NT2",
+    "title": "Amazon Virtual Private Cloud User Guide",
+    "authors": [
+      {
+        "id": "4589",
+        "name": "John Doe"
+      }
+    ],
+    "annotations":
+      [
+        {
+        "id": "vbfgh",
+        "location": 50,
+        "content": "Here is an annotation.",
+        "notes": []
+      },
+      {
+        "id": "lkjhdsfg",
+        "location": 58,
+        "content": "\"A quoted quote.\"\n",
+        "notes": [
+          {
+            "id": "poiu",
+            "content": "First internal note",
+            "end_location": 49277
+          }
+        ]
+      }
+    ],
+    "last_annotated_at": "May 31, 2012"
+  },
+  {
+    "id": "B007S33P5O",
+    "title": "Amazon Virtual Private Cloud Getting Started Guide",
+    "authors": [
+      {
+        "id": "6789",
+        "name": "Amazon Web Services"
+      }
+    ],
+    "annotations": [],
+    "last_annotated_at": "May 7, 2012"
+  }
+]
