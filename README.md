@@ -4,7 +4,7 @@
 
 A utility script that allows you to scrape your Kindle **Highlights**,
 **Notes**, **Books**, and **Authors** from your [Amazon Kindle Profile
-Page](htps://kindle.amazon.com).
+Page](https://kindle.amazon.com).
 
 ## Installation
 
