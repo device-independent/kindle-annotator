@@ -12,8 +12,14 @@ describe Kindle::Annotator::Models::Annotations do
   subject { described_class.new(annotations_collection) }
 
   describe ".find_all_by_book_id" do
-    it "returns the annotations by specified book_id" do
+    it "returns 2 for the annotations by specified book_id" do
       records = subject.find_all_by_book_id('accdd')
+      expect(records.count).to eq(2)
+    end
+
+    it "returns 0 for annotations when no specified book_id is found" do
+      records = subject.find_all_by_book_id('notfound')
+      expect(records.count).to eq(0)
     end
   end
 
