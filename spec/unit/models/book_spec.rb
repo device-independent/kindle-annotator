@@ -26,6 +26,14 @@ describe Kindle::Annotator::Models::Book do
       expect(subject.last_annotated_at).to eq(last_annotated_datetime)
     end
 
+    describe "#author_ids" do
+      it "returns an empty collection if key not found" do
+        record.delete('author_ids')
+
+        expect(subject.author_ids).to eq([])
+      end
+    end
+
     context "with associated #author_ids" do
       it "returns a collection of ids" do
         expect(subject.author_ids).to_not be_empty
@@ -47,6 +55,14 @@ describe Kindle::Annotator::Models::Book do
 
       it "returns false for #author_ids?" do
         expect(subject.author_ids?).to be_falsey
+      end
+    end
+
+    describe "#annotation_ids" do
+      it "returns an empty collection if key not found" do
+        record.delete('annotation_ids')
+
+        expect(subject.annotation_ids).to eq([])
       end
     end
 
