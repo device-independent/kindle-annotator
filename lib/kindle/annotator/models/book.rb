@@ -32,9 +32,23 @@ module Kindle
         end
 
         def authors
-          # If we have an explicit `authors` key, then use it.
-          # If we don't have an `authors` key, but have `author_ids`, then load them.
-          # If we don't have anything, then return an instance of empty Authors collection
+          return @authors if @authors
+
+          associated_authors = []
+
+          if @attributes.has_key?('authors')
+            authors_collection = @attributes['authors']
+            associated_authors = Authors.new(authors_collection)
+          elsif self.author_ids?
+            associated_authors = []
+          end
+
+          @authors = associated_authors
+          @authors
+        end
+
+        def authors?
+          self.authors.any?
         end
 
         def annotation_ids
@@ -49,6 +63,10 @@ module Kindle
           # If we have an explicit `annotations` key, then use it.
           # If we don't have an `annotations` key, but have `annotation_ids`, then load them.
           # If we don't have anything, then return an instance of empty Authors collection
+        end
+
+        def annotations?
+          self.annotations.any?
         end
 
         def last_annotated_at
