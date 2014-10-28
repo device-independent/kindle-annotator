@@ -9,7 +9,7 @@ module Kindle
         end
 
         def <=>(other)
-          self.book_id <=> other.book_id
+          self.location <=> other.location
         end
 
         def id
